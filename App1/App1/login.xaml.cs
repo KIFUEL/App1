@@ -18,6 +18,7 @@ namespace App1
             string strPasword = txtPassword.Text;
             string paswordBD = "123";
             string usuarioBD = "ADMIN";
+            //verifica que el uusario y la contrsaeña sean los correctos
             if ((strUsuario == usuarioBD) && (strPasword == paswordBD))
             {
 

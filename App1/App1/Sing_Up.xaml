@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Sing_Up">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Start"
+        <StackLayout VerticalOptions="Center"
                      HorizontalOptions="Center">
             <Label Text="REGISTRO"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                 FontSize="50"/>
 
-            <Label Text="Nombre(s)*"
+            <Label  Text="Nombre(s)*"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtNombres"/>
