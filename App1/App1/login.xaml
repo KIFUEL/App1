@@ -3,10 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.login">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Label Text="Bienvenido"  
+               HorizontalTextAlignment="Center" 
+               FontSize= "50"></Label>
+
+            <Label Text="Iniciar Sesion " 
+               HorizontalTextAlignment="Center"
+               FontSize="Title"></Label>
+
+            <Entry Placeholder="Usuario" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtUsuario"/>
+            <Entry Placeholder="Contraseña" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtPassword"/>
+            <Button Text="Iniciar session" Clicked="Button_Clicked"/>
+            <Label Text=" " TextColor="Red" x:Name="label_estado" />
+            <Label Text="¿Aun no tienes una cuentea? Registrate" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
