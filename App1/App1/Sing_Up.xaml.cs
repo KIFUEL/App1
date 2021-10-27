@@ -47,7 +47,7 @@ namespace App1
 
                 //cadena o expresion regular que verifica a un formato de correo electrónico
                 string expresion = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a - z]{ 2,4})$";
-                //verifica que el email ingresado corresponda con la expresio válida
+                //verifica que el email ingresado corresponda con la expresion válida
                 if (capNombres == null || capApellidoM == null || capApellidoP == null || capCorreo == null || capEstado == null || capMatricula == null || capCiudad == null)
                 {
                     Campo_Obligatorio.IsVisible = true;
@@ -57,7 +57,7 @@ namespace App1
                 {
                     if (Regex.IsMatch(capCorreo, expresion))
                     {
-                        //verifica que la direccion corresponda y que la longitud    de la cadena noesté vacía
+                        //verifica que la direccion corresponda y que la longitud    de la cadena no esté vacía
                         if (Regex.Replace(capCorreo, expresion, string.Empty).Length == 0)
                         {
                         //habilitar advertencia de correo mal escrito
@@ -72,7 +72,7 @@ namespace App1
                     else
                     {
                     wrongMail.IsVisible = true;
-                    return false;
+                    return true;
                     }
                 }
                 

@@ -15,9 +15,9 @@
 
             <Entry Placeholder="Usuario" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtUsuario"/>
             <Entry Placeholder="Contraseña" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtPassword"/>
-            <Button Text="Iniciar session" Clicked="Button_Clicked"/>
+            <Button Text="Iniciar sesion" Clicked="Button_Clicked"/>
             <Label Text=" " TextColor="Red" x:Name="label_estado" />
-            <Label Text="¿Aun no tienes una cuentea? Registrate" />
+            <Label Text="¿Aun no tienes una cuenta? Registrate" />
 
         </StackLayout>
     </ContentPage.Content>
