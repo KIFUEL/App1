@@ -72,7 +72,7 @@ namespace App1
                     else
                     {
                     wrongMail.IsVisible = true;
-                    return true;
+                    return false;
                     }
                 }
                 
