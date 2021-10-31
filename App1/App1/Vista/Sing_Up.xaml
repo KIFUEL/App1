@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Vista.Sing_Up">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Label Text="REGISTRO"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                FontSize="50"/>
+
+            <Label  Text="Nombre(s)*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtNombres"/>
+            
+            <Label Text="Apellido Paterno*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtApP"/>
+            
+            <Label Text="Apellido Materno*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtApM"/>
+            
+            <Label Text="Correo*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtCorreo"/>
+            <Label Text="Correo mal escrito" TextColor="Red" x:Name="wrongMail" IsVisible="False"
+                   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"/>
+            
+            <Label Text="Contraseña*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtPass"/>
+            
+            <Label Text="Repita su contraseña*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtPass1"/>
+            <Label Text="" TextColor="Red" x:Name="pass_incorrecto"></Label>
+            
+            <Label Text="Matricula*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtMatricula"/>
+
+            <Button Text="REGISTRAR" Clicked="Button_Registro"/>
+            <Label Text="Este correo ya existe" TextColor="Red" x:Name="duplicate_email" IsVisible="False"/>
+            <Label Text="Rellena los campos obligatorios" TextColor="Red" x:Name="Campo_Obligatorio" IsVisible="False" />
+               
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
