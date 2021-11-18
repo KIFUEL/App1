@@ -9,6 +9,7 @@ namespace App1.Data
 {
     public class SQLiteHelper
     {
+        //aqui van los metodos controladores de la base
         SQLiteAsyncConnection db;
         public SQLiteHelper(string dbPath)
         {
@@ -26,6 +27,24 @@ namespace App1.Data
             {
                 return null;
             }
+        }
+        /// <summary>
+        /// Recupera todos los alumnos
+        /// </summary>
+        /// <returns></returns>
+        public Task<List<usuario>> GetUsuariosAsync() 
+        {
+            return db.Table<usuario>().ToListAsync();
+        }
+
+        /// <summary>
+        /// Recupera alumno por ID
+        /// </summary>
+        /// <param name="IDusuario">ID del alumno que se requeire </param>
+        /// <returns></returns>
+        public Task<usuario> GetUsuariotoID(int IDusuario)
+        {
+            return db.Table<usuario>().Where(a => a.IDusuario == IDusuario).FirstOrDefaultAsync();
         }
     }
 }                            

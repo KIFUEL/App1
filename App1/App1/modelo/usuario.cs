@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+//base de datos
 
 namespace App1.modelo
 {
+    //tabla usuario creada
     public class usuario
     {
         [PrimaryKey, AutoIncrement]
@@ -15,7 +17,7 @@ namespace App1.modelo
         public string Apellido_Materno { get; set; }
         [MaxLength(64), NotNull]
         public string Apellido_Paterno { get; set; }
-        [MaxLength(64), NotNull]
+        [MaxLength(64)]
         public string Intereses { get; set; }
         [MaxLength(512)]
         public string Direccion { get; set; }

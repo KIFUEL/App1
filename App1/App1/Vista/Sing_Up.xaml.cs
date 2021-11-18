@@ -25,69 +25,99 @@ namespace App1.Vista
             bool verific = VerificarR();
             if (verific == true)
             {
-                //Prueba
-                Campo_Obligatorio.IsVisible = false;
-                wrongMail.IsVisible = false;
-
+                Campo_Obligatorio.Text = " ";
                 Registrar();
             }
+            else
+            {
+                Campo_Obligatorio.Text = "Rellena los campos obligatorios";
+            }
             
+        }
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool VerificarR()
         {
-            string capNombres = txtNombres.Text;
-            string capApellidoP = txtApP.Text;
-            string capApellidoM = txtApM.Text;
-            string capCorreo = txtCorreo.Text;
-            string capPass = txtPass.Text;
-            string capPass1 = txtPass1.Text;
-            string capMatricula = txtMatricula.Text;
-
-
-            if(capPass != capPass1) 
+            bool Respuesta;
+            if (string.IsNullOrEmpty(txtNombres.Text))
             {
-                pass_incorrecto.Text = "Las contraseñas no coinciden";
+                Respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtApP.Text))
+            {
+                Respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtApM.Text))
+            {
+                Respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtCorreo.Text))
+            {
+
+                Respuesta = false;
             }
 
-          
-                //cadena o expresion regular que verifica a un formato de correo electrónico
-                string expresion = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a - z]{ 2,4})$";
-                //verifica que el email ingresado corresponda con la expresion válida
-                if (capNombres == null || capApellidoM == null || capApellidoP == null || capCorreo == null || capPass == null || capMatricula == null || capPass1 == null)
-                {
-                    Campo_Obligatorio.IsVisible = true;
-                return false;
-                }
-                else
-                {
-                    if (Regex.IsMatch(capCorreo, expresion))
-                    {
-                        //verifica que la direccion corresponda y que la longitud    de la cadena no esté vacía
-                        if (Regex.Replace(capCorreo, expresion, string.Empty).Length == 0)
-                        {
-                        //habilitar advertencia de correo mal escrito
-                        Campo_Obligatorio.IsVisible = true;
-                        return false;
-                        }
-                        else
-                        {
-                        return true;
-                        }
-                    }
-                    else
-                    {
-                    wrongMail.IsVisible = true;
-                    return false;
-                    }
-                }
+            else if (string.IsNullOrEmpty(txtPass.Text))
+            {
+                Respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtPass1.Text))
+            {
+                Respuesta = false;
+            }
+            else if (string.IsNullOrEmpty(txtMatricula.Text))
+            {
+                Respuesta = false;
+            }
+            else
+            {
+                Respuesta = true;
+            }
+
+             if (email_bien_escrito(txtCorreo.Text) == false)
+            {
+                wrongMail.Text = "El correo no es valido";
+                Respuesta = false;
+            }
+            else
+            {
+              
+                wrongMail.Text = " ";
+            }
+            if (txtPass.Text != txtPass1.Text)
+            {
+                pass_incorrecto.Text = "La contraseña no es valida";
+                Respuesta = false;
+            }
+            else
+            {
                 
-        
+                pass_incorrecto.Text = " ";
+            }
+            return Respuesta;
         }
 
         public async void Registrar()
         {
-
 
             usuario us = new usuario
             {
@@ -100,13 +130,14 @@ namespace App1.Vista
             };
 
             await App.SQLiteDB.GuardarUsuario(us);
-            txtNombres.Text = null;
-            txtApP.Text = null;
-            txtApM.Text = null;
-            txtCorreo.Text = null;
-            txtPass.Text = null;
-            txtPass1.Text = null;
-            txtMatricula.Text = null;
+            txtNombres.Text = "";
+            txtApP.Text = "";
+            txtApM.Text = "";
+            txtCorreo.Text = "";
+            txtPass.Text = "";
+            txtPass1.Text = "";
+            txtMatricula.Text = "";
+            await DisplayAlert("Registro", "El regristro ha sido exitoso", "OK");
 
         }
     }

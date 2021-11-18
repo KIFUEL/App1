@@ -29,7 +29,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtCorreo"/>
-            <Label Text="Correo mal escrito" TextColor="Red" x:Name="wrongMail" IsVisible="False"
+            <Label Text="" TextColor="Red" x:Name="wrongMail"
                    VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
             
@@ -51,7 +51,7 @@
 
             <Button Text="REGISTRAR" Clicked="Button_Registro"/>
             <Label Text="Este correo ya existe" TextColor="Red" x:Name="duplicate_email" IsVisible="False"/>
-            <Label Text="Rellena los campos obligatorios" TextColor="Red" x:Name="Campo_Obligatorio" IsVisible="False" />
+            <Label Text="" TextColor="Red" x:Name="Campo_Obligatorio"  />
                
         </StackLayout>
     </ContentPage.Content>
