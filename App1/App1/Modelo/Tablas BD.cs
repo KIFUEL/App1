@@ -29,4 +29,7 @@ namespace App1.modelo
         public string password { get; set; }
         
     }
+
+   
+
 }

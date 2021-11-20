@@ -13,8 +13,10 @@
                HorizontalTextAlignment="Center"
                FontSize="Title"></Label>
 
-            <Entry Placeholder="Usuario" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtUsuario"/>
+            <Entry Placeholder="Correo electronico" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtcorreo"/>
+            <Label Text=" " TextColor="Red" x:Name="label_correo" />
             <Entry Placeholder="Contraseña" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtPassword"/>
+            <Label Text=" " TextColor="Red" x:Name="labe_contraseña" />
             <Button Text="Iniciar sesion" Clicked="Button_Clicked"/>
             <Label Text=" " TextColor="Red" x:Name="label_estado" />
             <Label Text="¿Aun no tienes una cuenta? Registrate" />

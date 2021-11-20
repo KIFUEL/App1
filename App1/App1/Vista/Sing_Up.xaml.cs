@@ -27,6 +27,7 @@ namespace App1.Vista
             {
                 Campo_Obligatorio.Text = " ";
                 Registrar();
+                Navigation.PushAsync(new login());
             }
             else
             {
@@ -36,23 +37,27 @@ namespace App1.Vista
         }
         private Boolean email_bien_escrito(String email)
         {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
+            if (string.IsNullOrEmpty(txtCorreo.Text) != true)
             {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                String expresion;
+                expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+                if (Regex.IsMatch(email, expresion))
                 {
-                    return true;
+                    if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
                     return false;
                 }
             }
-            else
-            {
-                return false;
-            }
+            else return false;
         }
 
         private bool VerificarR()
@@ -93,7 +98,7 @@ namespace App1.Vista
                 Respuesta = true;
             }
 
-             if (email_bien_escrito(txtCorreo.Text) == false)
+             if (email_bien_escrito(txtCorreo.Text) == false )
             {
                 wrongMail.Text = "El correo no es valido";
                 Respuesta = false;

@@ -4,12 +4,13 @@ using System.Text;
 using SQLite;
 using App1.modelo;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace App1.Data
 {
     public class SQLiteHelper
     {
-        //aqui van los metodos controladores de la base
+        //conexion con la base de datos 
         SQLiteAsyncConnection db;
         public SQLiteHelper(string dbPath)
         {
@@ -28,6 +29,8 @@ namespace App1.Data
                 return null;
             }
         }
+        //aqui van los metodos controladores de la base
+
         /// <summary>
         /// Recupera todos los alumnos
         /// </summary>
@@ -44,7 +47,16 @@ namespace App1.Data
         /// <returns></returns>
         public Task<usuario> GetUsuariotoID(int IDusuario)
         {
+            
             return db.Table<usuario>().Where(a => a.IDusuario == IDusuario).FirstOrDefaultAsync();
         }
+
+
+        //region metodos login
+       public Task<List<usuario>> GetUsuariosValido(string email, string password)
+        {
+            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'" )
+        }
+
     }
 }                            
