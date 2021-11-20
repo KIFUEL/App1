@@ -55,7 +55,7 @@ namespace App1.Data
         //region metodos login
        public Task<List<usuario>> GetUsuariosValido(string email, string password)
         {
-            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'" )
+            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'" ) ;
         }
 
     }

@@ -18,7 +18,10 @@ namespace App1.Vista
 
     {
 
-
+        /// <summary>
+        /// verifica que todos los campos esten llenos 
+        /// </summary>
+        /// <returns>false si estan vacios, true si contienen algo</returns>
         private bool Verificar()
         {
             bool Respuesta;
@@ -49,6 +52,11 @@ namespace App1.Vista
             return Respuesta;
         }
 
+        /// <summary>
+        /// Revisa que el correo este bien escrito
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>false si no es correcto, true si es correcto</returns>
         private Boolean email_bien_escrito(String email)
         {
             if (string.IsNullOrEmpty(txtcorreo.Text) != true)
@@ -97,12 +105,12 @@ namespace App1.Vista
                 }
                 else if (result.Count == 1)
                 {
-                    await Navigation.PushAsync(new iniciopagina());
+                    await Navigation.PushAsync(new Inicio());
                 }
                 else if (result.Count >= 1)
                 {
                     await DisplayAlert("Alerta", "Existe más de una cuenta registada, favor de solicitar la correción de la cuenta.", "OK");
-                    //await Navigation.PushAsync(new DuplicateAccountSendEmail());
+                    
                 }
             }
         }
