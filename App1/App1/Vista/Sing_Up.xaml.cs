@@ -131,7 +131,7 @@ namespace App1.Vista
                 Apellido_Materno = txtApM.Text,
                 email = txtCorreo.Text,
                 password = txtPass.Text,
-                Matricula = int.Parse(txtMatricula.Text),
+                Matricula = txtMatricula.Text,
             };
 
             await App.SQLiteDB.GuardarUsuario(us);

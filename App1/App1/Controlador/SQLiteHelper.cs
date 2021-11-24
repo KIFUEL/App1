@@ -58,5 +58,15 @@ namespace App1.Data
             return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'" ) ;
         }
 
+        /// <summary>
+        /// Recupero usuario por nombre
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <returns></returns>
+        public Task<List<usuario>> GetUsuarioporNombre(string nombre)
+        {
+            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE nombre = '" + nombre + "'");
+        }
+
     }
 }                            

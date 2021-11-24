@@ -17,14 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Vista\Inicio.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
+    <Compile Update="Vista\Buscar_Amigo.xaml.cs">
+      <DependentUpon>Buscar_Amigo.xaml</DependentUpon>
     </Compile>
     <Compile Update="Vista\login.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <Compile Update="Vista\Buscar Amigo.xaml.cs">
-      <DependentUpon>Buscar Amigo.xaml</DependentUpon>
     </Compile>
     <Compile Update="Vista\Sing_Up.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
@@ -32,9 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Vista\Buscar Amigo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Vista\Buscar GrupoEstudio.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

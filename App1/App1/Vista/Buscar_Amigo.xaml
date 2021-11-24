@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Vista.Inicio">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Buscar Amigos" FontSize="Header"></Label>
+            <Entry Placeholder="Nombre" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtdatos"/>
+            <Button Text="Buscar Por Nombre" Clicked="Button_Clicked"/>
+
+            <ListView x:Name="Lista_alumnos">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding IDalumno}" Grid.Row="0" Grid.Column="0" TextColor="Blue"></Label>
+                                <Label Text="{Binding Nombre}" Grid.Row="0" Grid.Column="1" TextColor="Blue"></Label>
+                                <Label Text="{Binding Apellido_Materno}" Grid.Row="0" Grid.Column="2" TextColor="Blue"></Label>
+                                <Label Text="{Binding Apellido_Paterno}" Grid.Row="0" Grid.Column="3" TextColor="Blue"></Label>
+                                <Label Text="{Binding email}" Grid.Row="0" Grid.Column="4" TextColor="Blue"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

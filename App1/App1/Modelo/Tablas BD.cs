@@ -24,7 +24,7 @@ namespace App1.modelo
         [MaxLength(264)]
         public string email { get; set; }
         [MaxLength(264)]
-        public int Matricula { get; set; }
+        public string Matricula { get; set; }
         [MaxLength(64)]
         public string password { get; set; }
         
