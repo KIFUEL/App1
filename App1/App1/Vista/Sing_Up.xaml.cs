@@ -145,5 +145,25 @@ namespace App1.Vista
             await DisplayAlert("Registro", "El regristro ha sido exitoso", "OK");
 
         }
+        public async void GuardarGrupo()
+        {
+
+            grupo gr = new grupo
+            {
+                IDgrupo = txtGrupo.Text,
+                
+            };
+
+            await App.SQLiteDB.GuardarGrupo(gr);
+            txtNombres.Text = "";
+            txtApP.Text = "";
+            txtApM.Text = "";
+            txtCorreo.Text = "";
+            txtPass.Text = "";
+            txtPass1.Text = "";
+            txtMatricula.Text = "";
+            await DisplayAlert("Registro", "El regristro ha sido exitoso", "OK");
+
+        }
     }
 }

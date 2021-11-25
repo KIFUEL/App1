@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Vista.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Grupo*"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="" HorizontalTextAlignment="Center" FontSize="Small" x:Name="txtGrupo"/>
+
+            <Button Text="BUSCAR" Clicked="Button_Clicked"></Button>
+            <Label Text="no se que poner aqui" TextColor="Red" x:Name="duplicate_email" IsVisible="False"/>
+            <Label Text="" TextColor="Red" x:Name="Campo_Obligatorio"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

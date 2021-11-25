@@ -23,6 +23,9 @@
     <Compile Update="Vista\login.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
+    <Compile Update="Vista\Registro_Grupo.xaml.cs">
+      <DependentUpon>Registro_Grupo.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Vista\Sing_Up.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
@@ -33,6 +36,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Vista\Buscar Tutor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vista\Registro_Grupo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

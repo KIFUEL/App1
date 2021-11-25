@@ -6,6 +6,16 @@ using SQLite;
 
 namespace App1.modelo
 {
+    //tabla grupo 
+    public class grupo
+    {
+        [PrimaryKey, AutoIncrement]
+        public int IDgrupo { get; set; }
+        [MaxLength(64),NotNull]
+        public string Materia { get; set;}
+        
+    }
+   
     //tabla usuario creada
     public class usuario
     {

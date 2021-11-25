@@ -67,6 +67,17 @@ namespace App1.Data
         {
             return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE nombre = '" + nombre + "'");
         }
-
+        public Task<int> GuardarGrupo(grupo gr)
+        {
+            if (gr.IDgrupo == 0)
+            {
+                return db.InsertAsync(gr);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
+
 }                            
