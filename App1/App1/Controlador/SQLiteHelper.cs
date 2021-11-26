@@ -45,10 +45,10 @@ namespace App1.Data
         /// </summary>
         /// <param name="IDusuario">ID del alumno que se requeire </param>
         /// <returns></returns>
-        public Task<usuario> GetUsuariotoID(int IDusuario)
+        public Task<List<usuario>> GetUsuariotoID(int IDusuario)
         {
             
-            return db.Table<usuario>().Where(a => a.IDusuario == IDusuario).FirstOrDefaultAsync();
+            return db.QueryAsync<usuario>("SELECT * FROM usuario where IDusuario = '" + IDusuario + "'");
         }
 
 

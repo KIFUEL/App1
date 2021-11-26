@@ -35,7 +35,7 @@ namespace App1.Vista
 
         private void Button_Clicked_3(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new iniciopagina());
+            Navigation.PushAsync(new Relacionar_Persona());
         }
 
         private void Button_Clicked_4(object sender, EventArgs e)
