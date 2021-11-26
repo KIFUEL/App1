@@ -19,25 +19,17 @@ namespace App1.Vista
            
         }
 
-        public async void Buscar_Persona()
+        private void Button_Clicked(object sender, EventArgs e)
         {
-
             List<usuario> result = App.SQLiteDB.GetUsuarioporNombre(txtdatos.Text).Result;
-
-            if (result.Count != 0)
+            
+            if (result.Count != 0 )
             {
                 Lista_alumnos.ItemsSource = result;
             }
-            else
-            {
-                await DisplayAlert("Alerta", "No se encontraron Usuarios registrados", "OK");
-            }
-        }
-        private void Button_Clicked (object sender, EventArgs e)
-        {
-            Buscar_Persona();
+
         }
 
-
+        
     }
 }
