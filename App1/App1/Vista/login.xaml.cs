@@ -105,7 +105,7 @@ namespace App1.Vista
                 }
                 else if (result.Count == 1)
                 {
-                    await Navigation.PushAsync(new Inicio());
+                    await Navigation.PushAsync(new iniciopagina());
                 }
                 else if (result.Count >= 1)
                 {

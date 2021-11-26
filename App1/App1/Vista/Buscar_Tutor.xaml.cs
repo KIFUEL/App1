@@ -11,33 +11,32 @@ using Xamarin.Forms.Xaml;
 namespace App1.Vista
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Buscar_Amigo : ContentPage
+    public partial class Buscar_Tutor : ContentPage
     {
-        public Buscar_Amigo()
+        public Buscar_Tutor()
         {
             InitializeComponent();
-           
         }
 
         public async void Buscar_Persona()
         {
-           
-            List<usuario> result = App.SQLiteDB.GetUsuarioporNombre(txtdatos.Text,"Alumno").Result;
+
+            List<usuario> result = App.SQLiteDB.GetUsuarioporNombre(txtdatos.Text, "Tutor").Result;
 
             if (result.Count != 0)
             {
-                Lista_alumnos.ItemsSource = result;
+                Lista_Tutores.ItemsSource = result;
             }
             else
             {
                 await DisplayAlert("Alerta", "No se encontraron Usuarios registrados", "OK");
             }
+
         }
-        private void Button_Clicked (object sender, EventArgs e)
+        
+        private void Button_Clicked(object sender, EventArgs e)
         {
             Buscar_Persona();
         }
-
-
     }
 }

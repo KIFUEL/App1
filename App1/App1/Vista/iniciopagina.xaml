@@ -4,7 +4,17 @@
              x:Class="App1.Vista.iniciopagina">
     <ContentPage.Content>
         <StackLayout>
-            <WebView Source="https://www.google.com"/>
+          
+            <Button Text="Buscar Amigos" Margin="20" Clicked="Button_Clicked"></Button>
+               
+            <Button Text="Buscar Tutor" Margin="20" Clicked="Button_Clicked_1" ></Button>
+            
+            <Button Text="Buscar grupo" Margin="20" Clicked="Button_Clicked_2" ></Button>
+            
+            <Button Text="Persona Recomendada" Margin="20" Clicked="Button_Clicked_3" ></Button>
+            
+            <Button Text="Mostrar todos los usuarios" Margin="20" Clicked="Button_Clicked_4" ></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

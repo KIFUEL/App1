@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Vista.Buscar_Amigo">
+             x:Class="App1.Vista.Buscar_Tutor">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Buscar Amigos" FontSize="Header"></Label>
+            <Label Text="Buscar Tutor" FontSize="Header"></Label>
             <Entry Placeholder="Nombre" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtdatos"/>
             <Button Text="Buscar Por Nombre" Clicked="Button_Clicked"/>
 
-            <ListView x:Name="Lista_alumnos">
+            <ListView x:Name="Lista_Tutores">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

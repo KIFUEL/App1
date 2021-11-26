@@ -92,6 +92,9 @@ namespace App1.Vista
             else if (string.IsNullOrEmpty(txtMatricula.Text))
             {
                 Respuesta = false;
+            }else if (string.IsNullOrEmpty(selector_usuario.SelectedItem as string))
+            {
+                Respuesta = false;
             }
             else
             {
@@ -118,6 +121,15 @@ namespace App1.Vista
                 
                 pass_incorrecto.Text = " ";
             }
+            
+            if (string.IsNullOrEmpty(selector_usuario.SelectedItem as string))
+            {
+                Tipo_Usuario_obligatorio.Text = "Eliga una opcion";
+            }
+            else
+            {
+                Tipo_Usuario_obligatorio.Text = "";
+            }
             return Respuesta;
         }
 
@@ -131,6 +143,7 @@ namespace App1.Vista
                 Apellido_Materno = txtApM.Text,
                 email = txtCorreo.Text,
                 password = txtPass.Text,
+                Tipo_Usuario = selector_usuario.SelectedItem as string,
                 Matricula = txtMatricula.Text,
             };
 

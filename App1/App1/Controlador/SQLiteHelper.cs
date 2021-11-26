@@ -52,21 +52,32 @@ namespace App1.Data
         }
 
 
-        //region metodos login
+      /// <summary>
+      /// recupera la infromacion de los usuarios para login
+      /// </summary>
+      /// <param name="email"></param>
+      /// <param name="password"></param>
+      /// <returns>regresa lista de usuarios </returns>
        public Task<List<usuario>> GetUsuariosValido(string email, string password)
         {
             return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'" ) ;
         }
 
-        /// <summary>
-        /// Recupero usuario por nombre
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <returns></returns>
-        public Task<List<usuario>> GetUsuarioporNombre(string nombre)
+       /// <summary>
+       /// Recupera la informacion de los alumnos
+       /// </summary>
+       /// <param name="nombre"></param>
+       /// <param name="tipo"></param>
+       /// <returns>lista con la informacion de los usuarios</returns>
+        public Task<List<usuario>> GetUsuarioporNombre(string nombre, string tipo)
         {
-            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE nombre = '" + nombre + "'");
+            return db.QueryAsync<usuario>("SELECT * FROM usuario WHERE nombre = '" + nombre + "' AND Tipo_Usuario = '" + tipo + "'");
         }
+
+       
+
+
+
 
     }
 }                            

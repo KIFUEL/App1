@@ -29,10 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Vista\Buscar GrupoEstudio.xaml">
+    <EmbeddedResource Update="Vista\Buscar_Tutor.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vista\Buscar Tutor.xaml">
+    <EmbeddedResource Update="Vista\Mostrar_Usuarios.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

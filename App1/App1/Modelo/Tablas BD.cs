@@ -27,6 +27,8 @@ namespace App1.modelo
         public string Matricula { get; set; }
         [MaxLength(64)]
         public string password { get; set; }
+        [MaxLength(20)]
+        public string Tipo_Usuario { get; set; }
         
     }
 
