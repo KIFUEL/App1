@@ -27,10 +27,12 @@ namespace App1.Vista
             bool Respuesta;
             if (string.IsNullOrEmpty(txtcorreo.Text))
             {
+                
                 Respuesta = false;
             }
             else if (string.IsNullOrEmpty(txtPassword.Text))
             {
+                labe_contraseña.Text = "Constraseña invalida";
                 Respuesta = false;
             }
             else
@@ -97,6 +99,7 @@ namespace App1.Vista
 
             if (Verificar() == true)
             {
+                labe_contraseña.Text = " ";
                 List<usuario> result = App.SQLiteDB.GetUsuariosValido(txtcorreo.Text, txtPassword.Text).Result;
 
                 if (result.Count == 0)
