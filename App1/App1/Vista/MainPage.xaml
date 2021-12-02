@@ -4,7 +4,7 @@
              x:Class="App1.Vista.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#EDC68F" Padding="24" CornerRadius="0">
             <Label Text="Bienvenido a SpaceClass!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 

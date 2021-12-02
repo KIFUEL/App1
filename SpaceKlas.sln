@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.Android", "App1\App1.Android\App1.Android.csproj", "{B7236775-22E0-4D16-909B-3DBA57E3169C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlassSpace", "App1\App1.Android\KlassSpace.csproj", "{B7236775-22E0-4D16-909B-3DBA57E3169C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1.iOS", "App1\App1.iOS\App1.iOS.csproj", "{B4BF6452-1DE0-4A4C-821C-FAAE7BEF0BD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App1", "App1\App1\App1.csproj", "{573F6AFC-93E0-43C1-89A9-39E0B2803616}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiKlass", "App1\App1\HiKlass.csproj", "{573F6AFC-93E0-43C1-89A9-39E0B2803616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

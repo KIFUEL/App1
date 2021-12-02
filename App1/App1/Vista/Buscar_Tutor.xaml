@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Vista.Buscar_Tutor">
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Buscar Tutor" FontSize="Header"></Label>
-            <Entry Placeholder="Nombre" HorizontalTextAlignment="Center" FontSize="40" x:Name="txtdatos"/>
+            <Label Text="Buscar Tutor" FontSize="{OnPlatform iOS=20, Android=40, UWP=40}"></Label>
+            <Entry Placeholder="Nombre" HorizontalTextAlignment="Center" FontSize="30" x:Name="txtdatos"/>
             <Button Text="Buscar Por Nombre" Clicked="Button_Clicked"/>
 
             <ListView x:Name="Lista_Tutores">

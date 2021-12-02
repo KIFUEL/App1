@@ -6,6 +6,7 @@
         <StackLayout>
 
             <Button Text="Buscar" Clicked="Button_Clicked"/>
+            
             <ListView x:Name="Usuario_ref">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -34,6 +35,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Relacionar" HorizontalOptions="Center"/>
+            <Button Text="Saltar" HorizontalOptions="Center"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
